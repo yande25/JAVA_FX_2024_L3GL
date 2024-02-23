@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="699.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.java_fx_2024_l3gl.HelloController">
+   <children>
+      <Label layoutX="231.0" layoutY="31.0" prefHeight="32.0" prefWidth="275.0" text="Liste des personnes">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="75.0" layoutY="92.0" prefHeight="17.0" prefWidth="45.0" text="Nom" />
+      <Label layoutX="75.0" layoutY="126.0" prefHeight="17.0" prefWidth="45.0" text="Prenom" />
+      <Label layoutX="75.0" layoutY="156.0" prefHeight="17.0" prefWidth="45.0" text="Annee" />
+      <Label layoutX="75.0" layoutY="192.0" prefHeight="17.0" prefWidth="45.0" text="Classe" />
+      <Label layoutX="75.0" layoutY="227.0" prefHeight="17.0" prefWidth="59.0" text="Specialite" />
+      <TextField fx:id="cNom" layoutX="120.0" layoutY="88.0" />
+      <TextField fx:id="cPrenom" layoutX="120.0" layoutY="131.0" />
+      <TextField fx:id="cAnnee" layoutX="120.0" layoutY="161.0" />
+      <TextField fx:id="cSpecialite" layoutX="127.0" layoutY="232.0" />
+      <Button layoutX="433.0" layoutY="80.0" mnemonicParsing="false" onAction="#add" text="Ajouter" />
+      <Button layoutX="433.0" layoutY="119.0" mnemonicParsing="false" onAction="#deletePersonne" text="Supprimer" />
+      <Button layoutX="433.0" layoutY="161.0" mnemonicParsing="false" onAction="#UpdatePersonne" text="Modifier" />
+      <Button layoutX="433.0" layoutY="210.0" mnemonicParsing="false" onAction="#clearChamps" text="Effacer" />
+      <TableView fx:id="tablefx" layoutX="21.0" layoutY="270.0" onMouseClicked="#charge" prefHeight="200.0" prefWidth="624.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="nom" prefWidth="75.0" text="nom" />
+            <TableColumn fx:id="prenom" prefWidth="75.0" text="prenom" />
+            <TableColumn fx:id="annee" prefWidth="75.0" text="annee" />
+            <TableColumn fx:id="specialite" prefWidth="75.0" text="specialite" />
+            <TableColumn fx:id="classe" prefWidth="75.0" text="classe" />
+        </columns>
+      </TableView>
+      <TextField fx:id="cid" layoutX="14.0" layoutY="19.0" visible="false" />
+      <ComboBox fx:id="cClasse" layoutX="127.0" layoutY="198.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
